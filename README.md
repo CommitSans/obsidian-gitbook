@@ -1,2 +1,2 @@
-# obsidian-gitbook
-A quick tool to publish an Obsidian Vault on GitBook
+# recursos-diseno-es
+Recursos de diseño en español, gratis y abiertos
