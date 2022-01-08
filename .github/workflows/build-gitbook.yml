@@ -1,5 +1,7 @@
 name: Build GitBook
 on: push
+env:
+  OBSIDIAN_REPO: ${{ secrets.OBSIDIAN_REPO }}
 
 jobs:
   run:
@@ -15,7 +17,7 @@ jobs:
           node-version: 12.x
 
       - name: Clone Obsidian vault
-        if: ${{secrets.OBSIDIAN_REPO}}
+        if: env.OBSIDIAN_REPO != null
         uses: actions/checkout@v2
         with:
           repository: ${{secrets.OBSIDIAN_REPO}}
