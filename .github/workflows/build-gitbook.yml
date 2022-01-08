@@ -1,5 +1,5 @@
 name: Build GitBook
-on: push
+on: [push, workflow_dispatch]
 env:
   OBSIDIAN_REPO: ${{secrets.OBSIDIAN_REPO}}
 
