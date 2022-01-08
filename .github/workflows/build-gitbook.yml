@@ -29,8 +29,8 @@ jobs:
         if: github.event.inputs.repo != null
         uses: actions/checkout@v2
         with:
+          github-token: ${{ secrets.DEPLOY_PAT }}
           repository: ${{github.event.inputs.repo}}
-          ref: 'main'
           path: obsidian
 
       - name: Install dependencies
