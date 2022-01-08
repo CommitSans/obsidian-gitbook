@@ -13,7 +13,11 @@ Every time you want to update the code, copy and paste your obsidian vault into 
 ## Automatic deployment
 If you don't want to be manually updating your GitBook deployment, you can follow this short guide.
 
-ToDo: Explain how to do it. IDK yet. I'm working on it.
+1. Create a repository for yor Obsidian vault, and push the changes there. You can check [recursos-diseno-es](https://github.com/recursosdisenoes/recursos-diseno-es) as an example (check out the `.gitignore`, it might be useful for your vault)
+2. Add a secret to your fork of this repo (Settings > Secrets) called `OBSIDIAN_REPO` with the value `username/repo-name`. In the case of the repo shown in step 1, it would be `recursosdisenoes/recursos-diseno-es`.
+3. Run the GitBook Deploy action every single time you want that repo to be updated.
+
+ToDo: Run the deploy auto on vault repo change.
 
 
 
