@@ -4,12 +4,12 @@
 	bare = false
 	logallrefupdates = true
 [remote "origin"]
-	url = https://github.com/recursosdisenoes/obsidian-gitbook
+	url = https://github.com/recursosdisenoes/recursos-diseno-es
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [gc]
 	auto = 0
 [http "https://github.com/"]
-	extraheader = AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzX0RQWU83R1doYVZHRWsyTVh3RnVKNk5VRmdqM0RwdzRlNXJHSQ==
+	extraheader = AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzX2l3SGtmMENJekhpNXBTUUZVZm1GYkRHSU5NNjNLWjM3QjRrcQ==
 [branch "main"]
 	remote = origin
 	merge = refs/heads/main

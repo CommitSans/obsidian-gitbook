@@ -1,0 +1,1 @@
+Sincronizar desde [[Sketch]] o [[Figma]]

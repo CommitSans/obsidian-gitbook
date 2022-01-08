@@ -108,6 +108,10 @@ dist
 
 # Obsidian workspace info
 obsidian/.obsidian/workspace
-obsidian/.obsidian/plugins/obsidian-trello/data.json
 obsidian/.obsidian/starred.json
 obsidian/.obsidian/appearance.json
+.obsidian/appearance.json
+.obsidian/themes/
+obsidian/.obsidian/plugins/
+.obsidian/workspace
+obsidian/.obsidian/graph.json
