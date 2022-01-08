@@ -19,14 +19,15 @@ If you don't want to be manually updating your GitBook deployment, you can follo
 > You can [see an example here](https://github.com/recursosdisenoes/obsidian-gitbook)
 
 1. Fork this repository, and connect it with GitBook.
-2. [Create a Personal Access Token (pat)](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+2. [Create a Personal Access Token (pat)](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). *Don't lose this, you will need it later, and there won't be a way to watching it again.*
 3. Create a secret in your fork (Settings > Secets), called `DEPLOY_PAT`, and set its value to the PAT you've just created.
 
 ### Obsidian repository
 > You can [see an example here](https://github.com/recursosdisenoes/example-obsidian)
 
 1. Create a repository for yor Obsidian vault, and push the changes there. You can check [recursos-diseno-es](https://github.com/recursosdisenoes/recursos-diseno-es) as an example (check out the `.gitignore`, it might be useful for your vault)
-2. Create a folder called `.github` and, inside it, another called `workflows`. Right there, add a `build-gitbook.yaml` file like this:
+2. Create a secret in this repo (Settings > Secets), called `DEPLOY_PAT`, and set its value to the PAT you've created before.
+3. Create a folder called `.github` and, inside it, another called `workflows`. Right there, add a `build-gitbook.yaml` file like this:
 
 ```
 name: Launch GitBook deploy workflow
@@ -55,7 +56,7 @@ jobs:
 
 > Update the `owner` and `repo` values with your fork!
 
-3. Push your obsidian repository, and see the actions work together.
+4. Push your obsidian repository, and see the actions work together.
 
 And that's all.
 
