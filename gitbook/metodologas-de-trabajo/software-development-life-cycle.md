@@ -1,2 +1,0 @@
-# Software Development Life Cycle
-

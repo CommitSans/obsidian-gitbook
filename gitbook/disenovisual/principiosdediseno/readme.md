@@ -1,2 +1,0 @@
-# principios-de-diseno
-

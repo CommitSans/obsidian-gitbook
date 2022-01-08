@@ -1,1 +1,0 @@
-# diseno-estrategico

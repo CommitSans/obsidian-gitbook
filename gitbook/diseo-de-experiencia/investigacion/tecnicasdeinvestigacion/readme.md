@@ -1,2 +1,0 @@
-# Técnicas de investigación
-

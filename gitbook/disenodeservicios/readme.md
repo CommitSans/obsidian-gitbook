@@ -1,2 +1,0 @@
-# diseno-de-servicios
-
