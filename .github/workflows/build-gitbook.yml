@@ -1,6 +1,8 @@
 name: Build GitBook
 on:
-  push
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       repo:
