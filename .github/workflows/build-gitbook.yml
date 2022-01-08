@@ -17,6 +17,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Print repo variable
+        run: echo Repo variable is ${{ inputs.repo }}
+
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
