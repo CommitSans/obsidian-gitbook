@@ -1,0 +1,23 @@
+name: Launch workflow in recursosdisenoes/obsidian-gitbook
+on: push
+
+jobs:
+  run:
+    name: Launch the actions there
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy GitBook
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.DEPLOY_PAT }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: 'recursosdisenoes',
+              repo: 'obsidian-gitbook',
+              workflow_id: 'build-gitbook.yml',
+              ref: 'main',
+              inputs: {
+                repo: '${{ github.repository }}',
+              },
+            });
+          debug: true
