@@ -30,6 +30,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ${{github.event.inputs.repo}}
+          ref: 'main'
           path: obsidian
 
       - name: Install dependencies
