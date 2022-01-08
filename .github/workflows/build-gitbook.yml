@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       repo:
+        description: 'Repository to use as Obsidian project'
         type: string
 
 jobs:
@@ -11,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print repo variable
-        run: echo Repo variable is ${{ inputs.repo }}
+        run: echo Repo variable is ${{ github.event.inputs.repo }}
