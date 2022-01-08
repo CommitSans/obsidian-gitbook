@@ -15,9 +15,9 @@ jobs:
           node-version: 12.x
 
       - name: Clone Obsidian vault
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
-          name: recursosdisenoes/recursos-diseno-es
+          repository: recursosdisenoes/recursos-diseno-es
           path: obsidian
 
       - name: Install dependencies
