@@ -20,4 +20,3 @@ jobs:
                 repo: '${{ github.repository }}',
               },
             });
-          debug: true
