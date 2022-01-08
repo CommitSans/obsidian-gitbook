@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       repo:
-        default: ${{secrets.OBSIDIAN_REPO}}
+        default: secrets.OBSIDIAN_REPO
         type: string
 
 jobs:
