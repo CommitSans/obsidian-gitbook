@@ -1,1 +1,0 @@
-# Desarrollo para diseñadoras

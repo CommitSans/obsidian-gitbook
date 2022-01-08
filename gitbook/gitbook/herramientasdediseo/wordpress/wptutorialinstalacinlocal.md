@@ -1,2 +1,0 @@
-# Instalar WordPress
-[[WordPress]]

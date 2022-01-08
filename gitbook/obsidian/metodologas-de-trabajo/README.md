@@ -1,1 +1,0 @@
-# Metodologías de trabajo

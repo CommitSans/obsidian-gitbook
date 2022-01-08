@@ -1,1 +1,0 @@
-# principios-de-diseo

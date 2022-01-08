@@ -1,2 +1,0 @@
-# glosario-provisional
-

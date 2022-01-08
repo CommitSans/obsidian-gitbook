@@ -1,1 +1,0 @@
-# Sistemas de diseño

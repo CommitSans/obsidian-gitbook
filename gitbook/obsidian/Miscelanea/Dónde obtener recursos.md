@@ -1,3 +1,0 @@
-Iconos
-Imágenes (Unsplash...)
-Ilustraciones

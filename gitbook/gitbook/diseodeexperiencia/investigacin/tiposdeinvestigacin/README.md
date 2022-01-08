@@ -1,1 +1,0 @@
-# tipos-de-investigacin

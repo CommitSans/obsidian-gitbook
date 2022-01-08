@@ -1,1 +1,0 @@
-# metodologas-de-trabajo
