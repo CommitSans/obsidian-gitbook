@@ -29,7 +29,7 @@ If you don't want to be manually updating your GitBook deployment, you can follo
 2. Create a secret in this repo (Settings > Secets), called `DEPLOY_PAT`, and set its value to the PAT you've created before.
 3. Create a folder called `.github` and, inside it, another called `workflows`. Right there, add a `build-gitbook.yaml` file like this:
 
-```
+```yaml
 name: Launch GitBook deploy workflow
 on: push
 
