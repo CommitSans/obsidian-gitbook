@@ -1,1 +1,0 @@
-# Diseño visual

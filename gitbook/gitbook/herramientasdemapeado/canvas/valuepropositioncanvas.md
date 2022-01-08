@@ -1,2 +1,0 @@
-# Value Proposition Canvas
-

@@ -1,1 +1,0 @@
-# tcnicas-de-investigacin

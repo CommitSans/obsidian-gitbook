@@ -1,2 +1,0 @@
-- las tablas no se renderizan en gitbook
-- los enlaces de obsidian no funcionan en gitbook (enlazar con issue)

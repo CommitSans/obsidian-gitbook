@@ -1,4 +1,0 @@
-# Moodboard
-Etiquetas:
-
-## Qué es
