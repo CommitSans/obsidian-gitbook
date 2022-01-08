@@ -1,7 +1,7 @@
 name: Build GitBook
 on: push
 env:
-  OBSIDIAN_REPO: ${{ secrets.OBSIDIAN_REPO }}
+  OBSIDIAN_REPO: ${{secrets.OBSIDIAN_REPO}}
 
 jobs:
   run:
@@ -20,7 +20,7 @@ jobs:
         if: env.OBSIDIAN_REPO != null
         uses: actions/checkout@v2
         with:
-          repository: ${{secrets.OBSIDIAN_REPO}}
+          repository: ${{env.OBSIDIAN_REPO}}
           path: obsidian
 
       - name: Install dependencies
