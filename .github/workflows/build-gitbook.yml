@@ -6,7 +6,6 @@ on:
   workflow_dispatch:
     inputs:
       repo:
-        default: null
         type: string
 
 jobs:
