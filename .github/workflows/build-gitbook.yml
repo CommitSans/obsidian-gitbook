@@ -1,7 +1,11 @@
 name: Build GitBook
-on: [push, workflow_dispatch]
-env:
-  OBSIDIAN_REPO: ${{secrets.OBSIDIAN_REPO}}
+on:
+  push
+  workflow_dispatch:
+    inputs:
+      repo:
+        default: ${{secrets.OBSIDIAN_REPO}}
+        type: string
 
 jobs:
   run:
@@ -17,10 +21,10 @@ jobs:
           node-version: 12.x
 
       - name: Clone Obsidian vault
-        if: env.OBSIDIAN_REPO != null
+        if: inputs.repo != null
         uses: actions/checkout@v2
         with:
-          repository: ${{env.OBSIDIAN_REPO}}
+          repository: ${{inputs.repo}}
           path: obsidian
 
       - name: Install dependencies
