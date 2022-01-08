@@ -1,1 +1,0 @@
-# Herramientas de diseño
