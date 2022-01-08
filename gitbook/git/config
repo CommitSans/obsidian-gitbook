@@ -1,0 +1,15 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/recursosdisenoes/recursos-diseno-es
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[gc]
+	auto = 0
+[http "https://github.com/"]
+	extraheader = AUTHORIZATION: basic eC1hY2Nlc3MtdG9rZW46Z2hzX21sdzZHQWRSS3doS1p6eEhWZ29aM0EzMnA4S1VpMjQ2UzN1Tg==
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main

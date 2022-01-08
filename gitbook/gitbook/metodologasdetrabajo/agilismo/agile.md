@@ -1,0 +1,1 @@
+https://www.pmtoday.co.uk/spotify-scaling-agile-model/
