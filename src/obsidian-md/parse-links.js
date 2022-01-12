@@ -113,10 +113,10 @@ async function parsePageLinks(filename, index) {
         Maybe trying to use as may ../ as levels are in the path?
          -> (check src/gitbook/summary.md).
       */
-      
+
       // ToDo: Make this dynamic based on the orifinal fonder parsed
       const originDepth = '../gitbook/'.split('/').length;
-      const depth = (filename.split('/').length - 1) - originDepth;
+      const depth = filename.split('/').length - originDepth;
       
       // Initial depth of '0'
       let pageDepth = './';
@@ -133,6 +133,7 @@ async function parsePageLinks(filename, index) {
 
       const gitbookLink = `[${pageName}](${pageDepth}${pageLinkPath})`
       // console.log(filename, pageDepth, pageLinkPath);
+      console.log(filename, depth, pageDepth);
       
       // Unable to use .replace() with RegEx because of [] chars
       pageText = pageText.split(uniqueLinks[i]).join(gitbookLink);
