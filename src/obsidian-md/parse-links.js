@@ -98,10 +98,12 @@ async function parsePageLinks(filename, index) {
     for (let i = 0; i < uniqueLinks.length; i += 1) {
       const pageName = uniqueLinks[i].replace('[[', '').replace(']]', '');
       const pageLinkPath = pageLink(pageName, index);
-      const mdlink = `[${pageName}](${pageLinkPath})`
+
+      // In GitBook, relative links to the book are preceded by ../
+      const gitbookLink = `[${pageName}](../${pageLinkPath})`
       
       // Unable to use .replace() with RegEx because of [] chars
-      pageText = pageText.split(uniqueLinks[i]).join(mdlink);
+      pageText = pageText.split(uniqueLinks[i]).join(gitbookLink);
     }
 
     // ...And store the new file
