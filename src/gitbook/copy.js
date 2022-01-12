@@ -16,6 +16,22 @@ async function copyProject(obsidian, gitbook) {
     await fse.remove(`${gitbook}/.obsidian`);
     console.log('> Removed Obsidian files');
 
+    // Remove Git files
+    const gitPaths = ['.git', '.gitignore', '.gitattributes'];
+
+    // gitPaths.forEach(async (path) => {
+    for (var i = 0; i < gitPaths.length; i++) {
+      const path = gitPaths[i];
+      
+      const fullPath = `${gitbook}/${path}`;
+      const exists = await fse.pathExists(fullPath);
+      if (exists) {
+        await fse.remove(fullPath);
+      }
+    // })
+    }
+    console.log('> Removed Git-related files');
+
     return true;
   } catch (e) {
     console.error('> Error copying Obsidian project to GitBook folder');
