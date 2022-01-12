@@ -2,7 +2,8 @@ const copyProject = require('./gitbook/copy');
 const indexProject = require('./gitbook/index-project');
 const renameProject = require('./gitbook/rename');
 const summarize = require('./gitbook/summary');
-// const obsidianToMD = require('./gitbook/obsidian');
+
+const parseLinks = require('./obsidian-md/parse-links');
 
 /* Load settings (if exist) */
 const settings = require('./settings.js');
@@ -47,6 +48,9 @@ async function main() {
 
   /* Convert the Obsidian syntax to markdown */
   // obsidianToMd(index);
+
+  /* Parse page links */
+  const pageIndex = parseLinks(settings.gitbookProject, index);
 
   return true
 }
