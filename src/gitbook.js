@@ -2,20 +2,11 @@ const copyProject = require('./gitbook/copy');
 const indexProject = require('./gitbook/index-project');
 const renameProject = require('./gitbook/rename');
 const summarize = require('./gitbook/summary');
-// const obsidianToMD = require('./gitbook/obsidian');
+
+const parseLinks = require('./obsidian-md/parse-links');
 
 /* Load settings (if exist) */
-let settings = {
-  obsidianProject: '../obsidian',
-  gitbookProject: '../gitbook',
-};
-
-try {
-  settings = require('../settings.json');
-  console.log('Settings loaded from settings.json');
-} catch {
-  console.log('Settings not found. Using default settings');
-}
+const settings = require('./settings.js');
 
 
 /**
@@ -34,6 +25,8 @@ async function main() {
   /* Build an index of the project files */
   const index = await indexProject(settings.gitbookProject);
   // console.log(index)
+
+  /* ToDo: Remove unneccessary files and folders (.gitignore, .gitatributes, .git...) */
 
   /* Rename the files and folders */
   const renamed = await renameProject(settings.gitbookProject, index);
@@ -55,6 +48,9 @@ async function main() {
 
   /* Convert the Obsidian syntax to markdown */
   // obsidianToMd(index);
+
+  /* Parse page links */
+  const pageIndex = parseLinks(settings.gitbookProject, index);
 
   return true
 }

@@ -66,7 +66,9 @@ As soon as you push code to your Obsidian repository, it will trigget an action 
 ## Status and known issues:
 - [x] Transform Obsidian project in Gitbook project (naming and structure)
 - [x] Generate a valid SUMMARY.md
+- [x] Remove git related files and folders
 - [ ] Transform page links to plain markdown links (next-up)
+- [ ] Replace tildes and ñ instead of removing them (next-up)
 - [ ] Show all the pages linking to the current one (on the roadmap)
 - [ ] Link to blocks (on the roadmap)
 
