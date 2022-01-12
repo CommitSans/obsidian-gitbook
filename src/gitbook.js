@@ -5,17 +5,7 @@ const summarize = require('./gitbook/summary');
 // const obsidianToMD = require('./gitbook/obsidian');
 
 /* Load settings (if exist) */
-let settings = {
-  obsidianProject: '../obsidian',
-  gitbookProject: '../gitbook',
-};
-
-try {
-  settings = require('../settings.json');
-  console.log('Settings loaded from settings.json');
-} catch {
-  console.log('Settings not found. Using default settings');
-}
+const settings = require('settings.js');
 
 
 /**
@@ -34,6 +24,8 @@ async function main() {
   /* Build an index of the project files */
   const index = await indexProject(settings.gitbookProject);
   // console.log(index)
+
+  /* ToDo: Remove unneccessary files and folders (.gitignore, .gitatributes, .git...) */
 
   /* Rename the files and folders */
   const renamed = await renameProject(settings.gitbookProject, index);
