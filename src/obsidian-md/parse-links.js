@@ -99,8 +99,37 @@ async function parsePageLinks(filename, index) {
       const pageName = uniqueLinks[i].replace('[[', '').replace(']]', '');
       const pageLinkPath = pageLink(pageName, index);
 
+      // ToDo: If not link found, act in consequence
+      if (!pageLinkPath) {
+        console.warn(`[warn] Unable to find link for ${pageName}`);
+        break;
+      }
+
       // In GitBook, relative links to the book are preceded by ../
-      const gitbookLink = `[${pageName}](../${pageLinkPath})`
+      /*
+        ToDo:
+        In nested folders, internal links are not working. 
+        It might be related to the ../ at the begining.
+        Maybe trying to use as may ../ as levels are in the path?
+         -> (check src/gitbook/summary.md).
+      */
+      const depth = pageLinkPath.split('/').length - 1;
+      
+      // Initial depth of '0'
+      let pageDepth = './';
+      
+      if (depth > 0) {
+        // Reset page depth
+        pageDepth = '';
+        
+        // And add the nested levels required
+        for (let j = 0; j < depth; j += 1) {
+          pageDepth += '../';
+        }
+      }
+
+      const gitbookLink = `[${pageName}](${pageDepth}${pageLinkPath})`
+      // console.log(pageDepth, pageLinkPath);
       
       // Unable to use .replace() with RegEx because of [] chars
       pageText = pageText.split(uniqueLinks[i]).join(gitbookLink);
@@ -142,11 +171,11 @@ async function parseLinks(folder, index, rootIndex) {
       }
 
       // Parse page links
-      console.log(`~~> ${folder}/${nodes[i]}`)
+      // console.log(`~~> ${folder}/${nodes[i]}`)
       await parsePageLinks(`${folder}/${nodes[i]}`, originalIndex);
     }
 
-    console.log('> First level page links created!');
+    // console.log('> First level page links created!');
 
     return pageLinks;
   } catch (e) {
