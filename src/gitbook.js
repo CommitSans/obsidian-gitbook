@@ -5,7 +5,7 @@ const summarize = require('./gitbook/summary');
 // const obsidianToMD = require('./gitbook/obsidian');
 
 /* Load settings (if exist) */
-const settings = require('settings.js');
+const settings = require('./settings.js');
 
 
 /**
