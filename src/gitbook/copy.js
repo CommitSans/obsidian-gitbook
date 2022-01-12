@@ -17,7 +17,12 @@ async function copyProject(obsidian, gitbook) {
     console.log('> Removed Obsidian files');
 
     // Remove Git files
-    const gitPaths = ['.git', '.gitignore', '.gitattributes'];
+    const gitPaths = [
+      '.git',
+      '.gitignore',
+      '.gitattributes',
+      '.github',
+    ];
 
     for (var i = 0; i < gitPaths.length; i++) {
       const path = gitPaths[i];
