@@ -72,7 +72,7 @@ As soon as you push code to your Obsidian repository, it will trigget an action 
 
 
 ## Contributing
-This project has been created for the Recursos de Diseño en Español *(Design Resources in Spanish)* project. The goal is to have an Open Source and tool to spread the knowledege in a well structured way.
+This project has been created for the Recursos de Diseño en Español *(Design Resources in Spanish)* project. The goal is to have an Open Source and tool to spread the knowledge in a well structured way.
 
 It's a basic version, built in a few free hours of a few people volunteering. So it might not cover all the features you might want. 
 
